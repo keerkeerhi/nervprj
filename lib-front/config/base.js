@@ -8,7 +8,7 @@ module.exports = function() {
     return {
         entry: './src/index.js',
         output: {
-            path: path.resolve(__dirname, 'dist'), //定位，输出文件的目标路径
+            path: path.resolve(__dirname, '../dist'), //定位，输出文件的目标路径
             filename: '[name].js',
             // publicPath: publicPath,
             // sourceMapFilename: '[name].map'
@@ -19,6 +19,7 @@ module.exports = function() {
             }
         },
         resolve: {
+            // 解决，react-router-dom 等依赖react的包报错缺少 react的问题
             alias: {
                 'react': 'nervjs',
                 'react-dom': 'nervjs',
@@ -39,6 +40,8 @@ module.exports = function() {
                     // ],
                     use: 'babel-loader'
                 },
+                // css 引入外来或者公共样式，与模块式css混淆会导致 外来样式不认识
+                // 此时 公共样式统一放在 assets文件夹下
                 {
                     test: /\.css$/,
                     include: [
@@ -51,6 +54,8 @@ module.exports = function() {
                         ]
                     })
                 },
+
+                // css 模块儿化配置
                 {
                     test: /\.css$/,
                     exclude: [
@@ -92,9 +97,11 @@ module.exports = function() {
             // 提取css
             new ExtractTextPlugin('style.css'),
 
-            new CopyWebpackPlugin([  //src下其他的文件直接复制到dist目录下
-                { from:'src/assets',to: 'assets' }
-            ]),
+            // 直接复制过去的样式文件
+            // new CopyWebpackPlugin([  //src下其他的文件直接复制到dist目录下
+            //     { from:'src/assets',to: '../dist/assets' }
+            // ]),
+            // 此处的入口地址一定要写正确哦
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: './index.html'
