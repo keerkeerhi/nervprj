@@ -1,6 +1,6 @@
 import Nerv from 'nervjs'
 import Swiper from 'swiper'
-import "./Home.css"
+import ss from "./Home.css"
 
 class Home extends Nerv.Component {
     constructor() {
@@ -8,10 +8,10 @@ class Home extends Nerv.Component {
         this.state = {
             message: 'w bu hao',
             banners: [
-            {img:"assets/img/back1.jpg"},
-            {img:"assets/img/back2.jpg"},
-            {img:"assets/img/back3.jpg"},
-            {img:"assets/img/back4.jpg"}
+            {img:"/assets/img/back1.jpg"},
+            {img:"/assets/img/back2.jpg"},
+            {img:"/assets/img/back3.jpg"},
+            {img:"/assets/img/back4.jpg"}
             ]
         }
     }
@@ -21,10 +21,11 @@ class Home extends Nerv.Component {
         return (
             <div style={{height:windowH+'px'}} className='banner'>
                 <div className='swiper-container'>
-                    <div className='swiper-wrapper'>
+                    <div className={ss.wrapper + ' swiper-wrapper'}>
                         {
                             this.state.banners.map(it=>(
-                                <div style={{background: "url('"+ it.img +"') no-repeat"}} className='swiper-slide'>
+                                // style={{background: "url('"+ it.img +"') no-repeat"}}
+                                <div  className='swiper-slide'>
 
                                 </div>
                             ))
@@ -38,6 +39,7 @@ class Home extends Nerv.Component {
     componentDidMount(){
         let mySwiper = new Swiper('.swiper-container', {
             direction:'horizontal',
+            autoHeight: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev'
