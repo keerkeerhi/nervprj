@@ -103,7 +103,11 @@ module.exports = function() {
         plugins: [
             // 提取css
             new ExtractTextPlugin('[name]style.css'),
-
+            new webpack.DefinePlugin({
+                'process.env': {
+                    'NODE_ENV': JSON.stringify('prod')
+                }
+            }),
             // 直接复制过去的样式文件
             // new CopyWebpackPlugin([  //src下其他的文件直接复制到dist目录下
             //     { from:'src/assets',to: '../dist/assets' }

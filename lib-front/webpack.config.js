@@ -4,6 +4,6 @@ function buildConfig(env) {
 }
 
 module.exports = env=>{
-    console.log('=====env=',env.NODE_ENV)
+    console.log('=====env=',env.NODE_ENV,process.env.NODE_ENV)
     return buildConfig(env.NODE_ENV)
 }

@@ -1,5 +1,5 @@
 import Nerv from 'nervjs'
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch,Redirect } from 'react-router-dom';
 
 import Home from './Home';
 import GamePage from './Game';
@@ -13,10 +13,15 @@ import "./assets/style.css"
 const App = () => (
     <Router>
         <div>
-            <Route path="/index" component={Home} />
-            <Route path="/game" component={GamePage} />
-            <Route path="/login" component={Login} />
-            <Route path="/back" component={Back} />
+            <Switch>
+                <Route exact path="/" render={()=> (
+                    <Redirect to={'/index/home'}/>
+                )} />
+                <Route path="/index" component={Home} />
+                <Route path="/game" component={GamePage} />
+                <Route path="/login" component={Login} />
+                <Route path="/back" component={Back} />
+            </Switch>
         </div>
     </Router>
 );
