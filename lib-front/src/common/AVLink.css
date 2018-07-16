@@ -1,0 +1,36 @@
+.base{
+    width: 100%;
+    font-weight: bold;
+}
+.normal>a{
+    text-align: center;
+    width: 100%;
+    /*padding: 0 20px;*/
+    height: 100%;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+.normal>a:hover{
+    color: #2a96ff;
+}
+
+.normal{
+    composes: base;
+    /*border: 1px solid rgba(0,0,0,0);*/
+}
+.active{
+    /*border: 1px solid #ccc;*/
+    composes: base;
+    background: #fff;
+}
+.active>a{
+    text-align: center;
+    width: 100%;
+    /*padding: 0 20px;*/
+    height: 100%;
+    display: inline-block;
+    background: #2A96FF;
+    color: #fff;
+    text-decoration: none;
+}

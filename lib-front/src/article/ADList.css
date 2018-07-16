@@ -1,0 +1,22 @@
+.arhead{
+    border-left:3px solid #2A96FF;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.artit{
+    border-top: 1px solid #ccc;
+    width: 800px;
+}
+.artit>li{
+    height: 50px;
+    line-height: 50px;
+    color: #2a96ff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.artit>li>label:first-child{
+    margin-left: 15px;
+    cursor: pointer;
+}

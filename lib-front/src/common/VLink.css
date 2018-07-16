@@ -1,0 +1,24 @@
+.base{
+    padding: 0 20px;
+    font-weight: bold;
+}
+.normal>a{
+    height: 100%;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.normal{
+    composes: base;
+}
+.active{
+    composes: base;
+    background: #fff;
+}
+.active>a{
+    height: 100%;
+    display: inline-block;
+    color: #20a0ff;
+    text-decoration: none;
+}

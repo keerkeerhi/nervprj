@@ -1,0 +1,22 @@
+.header{
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+    color: rgba(0,0,0,.87);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.time{
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    color: rgba(0,0,0,.54);
+    white-space: nowrap;
+    margin-bottom: 30px;
+}
+.content{
+
+}
+.content>pre{
+    text-indent: 40px;
+}

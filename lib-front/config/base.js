@@ -7,6 +7,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = function() {
     return {
         entry: './src/index.js',
+        devServer: {
+            contentBase: '/'
+        },
         output: {
             path: path.resolve(__dirname, '../dist'), //定位，输出文件的目标路径
             filename: '[name].js',
@@ -45,7 +48,8 @@ module.exports = function() {
                 {
                     test: /\.css$/,
                     include: [
-                        path.resolve(__dirname, '../src/assets')
+                        path.resolve(__dirname, '../src/assets'),
+                        path.resolve(__dirname, '../node_modules')
                     ],
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
@@ -61,6 +65,9 @@ module.exports = function() {
                     exclude: [
                         path.resolve(__dirname, '../src/assets'),
                     ],
+                    include: [
+                        path.resolve(__dirname, '../src')
+                    ],
                     // use: 'css-loader'
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
@@ -69,7 +76,7 @@ module.exports = function() {
                                 options: {
                                     modules: true,
                                     sourceMap: true,
-                                    importLoaders: 1,
+                                    importLoaders: 2,
                                     localIdentName: '[name]__[local]___[hash:base64:5]'
                                 }
                             }
@@ -87,7 +94,7 @@ module.exports = function() {
                     test: /\.(woff|woff2|eot|ttf|svg)$/,
                     use: [
                         {
-                            loader: 'url-loader?limit=100000' //
+                            loader: 'url-loader?limit=30000' //
                         }
                     ]
                 }
@@ -95,7 +102,7 @@ module.exports = function() {
         },
         plugins: [
             // 提取css
-            new ExtractTextPlugin('style.css'),
+            new ExtractTextPlugin('[name]style.css'),
 
             // 直接复制过去的样式文件
             // new CopyWebpackPlugin([  //src下其他的文件直接复制到dist目录下

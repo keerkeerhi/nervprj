@@ -1,0 +1,15 @@
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    background: #20a0ff;
+    height: 65px;
+    line-height: 65px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.nav>li{
+    margin-right: 32px;
+}
+

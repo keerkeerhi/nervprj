@@ -1,0 +1,40 @@
+.nervPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(41,72,96);
+}
+.loginForm{
+    width: 323px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    background: #fff;
+}
+.loginForm>div:first-child{
+    margin-left: 20px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    width: 283px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #cccccc;
+}
+.loginForm>section>div{
+    width: 283px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+.subbtn{
+    height: 60px;
+    line-height: 60px;
+    background: rgb(33,150,243);
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.subbtn:hover{
+    background: #51ACF5;
+}

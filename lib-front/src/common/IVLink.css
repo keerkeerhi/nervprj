@@ -1,0 +1,26 @@
+.base{
+    font-weight: bold;
+    padding: 0 20px;
+}
+.normal>a{
+    height: 100%;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.normal{
+    composes: base;
+    /*border: 1px solid rgba(0,0,0,0);*/
+}
+.active{
+    /*border: 1px solid #ccc;*/
+    composes: base;
+    background: #fff;
+}
+.active>a{
+    height: 100%;
+    display: inline-block;
+    color: #20a0ff;
+    text-decoration: none;
+}
