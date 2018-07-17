@@ -60,13 +60,18 @@ class Home extends Nerv.Component {
                 <footer className={ss.footer} >
                     <header>
                         <div className={ss.link} >
-                            友情链接：
+                            <label>友情链接：</label>
                             <a href="http://wz321.net/" target="_blank" >网址321</a>
                         </div>
                     </header>
                     <div>
                         <div>© Copyright - ICP备XXX号 - 大玉软件</div>
-                        <div>联系电话：6226520</div>
+                        <div className={ss.phone}>
+                            <label>联系电话：6226520</label>
+                            <label onClick={()=>{
+                                this.props.history.push('/login')
+                            }} >manager</label>
+                        </div>
                     </div>
                 </footer>
             </div>

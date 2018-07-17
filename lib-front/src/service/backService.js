@@ -41,7 +41,7 @@ export default {
     },
     delbanner(id){
         return new Promise((resolve,reject)=>{
-            axios.delete(baseURL + 'banner/'+id)
+            axios.post(baseURL + 'del_banner/',{id})
                 .then((response) => {
                     resolve(response.data);
                 })
@@ -83,9 +83,9 @@ export default {
                 });
         })
     },
-    delbanner(id){
+    delNav(id){
         return new Promise((resolve,reject)=>{
-            axios.delete(baseURL + 'nav/'+id)
+            axios.post(baseURL + 'del_nav/',{id})
                 .then((response) => {
                     resolve(response.data);
                 })
@@ -140,7 +140,7 @@ export default {
     },
     delArt(id){
         return new Promise((resolve,reject)=>{
-            axios.delete(baseURL + 'article/'+id)
+            axios.post(baseURL + 'del_art/',{id})
                 .then((response) => {
                     resolve(response.data);
                 })

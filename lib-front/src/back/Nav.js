@@ -60,7 +60,7 @@ class Game extends Nerv.Component {
 
     }
     delNav(id,e){
-        backService.delbanner(id).then(res=>{
+        backService.delNav(id).then(res=>{
             if (res.code==0)
             {
                 this.getList()
