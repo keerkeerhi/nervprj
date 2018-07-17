@@ -41,7 +41,7 @@ export default {
     },
     delbanner(id){
         return new Promise((resolve,reject)=>{
-            axios.post(baseURL + 'del_banner/',{id})
+            axios.post(baseURL + 'del_banner',{id})
                 .then((response) => {
                     resolve(response.data);
                 })
@@ -54,6 +54,7 @@ export default {
         return new Promise((resolve,reject)=>{
             axios.post(baseURL + 'nav',params)
                 .then((response) => {
+                    resolve(response.data);
                     resolve(response.data);
                 })
                 .catch((error) => {
@@ -85,7 +86,7 @@ export default {
     },
     delNav(id){
         return new Promise((resolve,reject)=>{
-            axios.post(baseURL + 'del_nav/',{id})
+            axios.post(baseURL + 'del_nav',{id})
                 .then((response) => {
                     resolve(response.data);
                 })
@@ -140,7 +141,7 @@ export default {
     },
     delArt(id){
         return new Promise((resolve,reject)=>{
-            axios.post(baseURL + 'del_art/',{id})
+            axios.post(baseURL + 'del_art',{id})
                 .then((response) => {
                     resolve(response.data);
                 })

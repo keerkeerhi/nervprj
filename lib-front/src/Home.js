@@ -53,7 +53,7 @@ class Home extends Nerv.Component {
                         }
                     </ul>
                 </header>
-                <div style={{height:windowH+'px'}} >
+                <div style={{minHeight:windowH+'px'}} >
                     <Route path={`${match.url}/home`} component={Inx} />
                     <Route path={`${match.url}/art/:id`} component={Art} />
                 </div>

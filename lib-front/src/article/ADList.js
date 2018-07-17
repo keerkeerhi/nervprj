@@ -33,8 +33,8 @@ class ADetail extends Nerv.Component {
             {
                 if (res.info.length==1)
                 {
-                    let id = res.info[0]
-                    this.props.history.push(`${durl}/detail/${id}`)
+                    let id = res.info[0].id
+                    this.props.history.push(`${durl}detail/${id}`)
                 }
                 else
                     this.setState({list:res.info,detailPath:durl})
