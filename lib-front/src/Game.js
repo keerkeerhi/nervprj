@@ -1,4 +1,5 @@
 import Nerv from 'nervjs'
+import ss from "./Game.css"
 
 class Game extends Nerv.Component {
     constructor() {
@@ -10,7 +11,8 @@ class Game extends Nerv.Component {
     render() {
         return (
             <div>
-                Hello, {this.state.message}
+                <div className={ss.divdemo} id="divdemo" >
+                </div>
             </div>
         )
     }

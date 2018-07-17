@@ -1,0 +1,11 @@
+.divdemo{
+    margin-top: 50px;
+    margin-left: 50px;
+    background: #ccc;
+    /*box-shadow: 0 0 30px 0 #000000;*/
+    width: 300px;
+    height:300px;
+    transform: rotateY(30deg);
+    transform: rotateX(30deg);
+    transform-style: preserve-3d;
+}
