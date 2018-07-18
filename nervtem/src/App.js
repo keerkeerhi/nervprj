@@ -1,14 +1,19 @@
 import Nerv from 'nervjs'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './Home';
 import GamePage from './Game';
 
+import "./assets/reset.css"
+import "./assets/style.css"
+
 const App = () => (
     <Router>
         <div>
-            <Route exact path="/" component={Home} />
-            <Route path="/game" component={GamePage} />
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/game" component={GamePage} />
+            </Switch>
         </div>
     </Router>
 );
