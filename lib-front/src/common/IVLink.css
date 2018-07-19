@@ -13,6 +13,11 @@
     composes: base;
     /*border: 1px solid rgba(0,0,0,0);*/
 }
+
+.normal:hover>a{
+    transition: color .5s;
+    color: #007aff;
+}
 .active{
     /*border: 1px solid #ccc;*/
     composes: base;

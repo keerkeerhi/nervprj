@@ -5,7 +5,7 @@ module.exports = function (env) {
         devServer: {
             proxy: {
                 "/api": {
-                    "target": "http://localhost:8888",
+                    "target": "http://localhost:8888/public/",
                     "changeOrigin": true,
                     "pathRewrite": {"^/api": "/api"}
                 }

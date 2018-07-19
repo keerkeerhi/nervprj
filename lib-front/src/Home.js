@@ -57,6 +57,9 @@ class Home extends Nerv.Component {
                     <Route path={`${match.url}/home`} component={Inx} />
                     <Route path={`${match.url}/art/:id`} component={Art} />
                 </div>
+                <section className={ss.newscont} >
+                    
+                </section>
                 <footer className={ss.footer} >
                     <header>
                         <div className={ss.link} >
