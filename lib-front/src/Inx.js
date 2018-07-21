@@ -62,7 +62,9 @@ class Inx extends Nerv.Component {
                             {
                                 this.state.banners.map(it=>(
                                     <div style={{background: "url('"+ it.url +"') no-repeat",
-                                        height:windowH+'px'
+                                        height:windowH+'px',
+                                        backgroundSize: "100% 100%",
+                                        backgroundPosition: "center"
                                     }}
                                          className='swiper-slide'>
                                     </div>
