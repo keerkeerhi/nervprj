@@ -8,6 +8,11 @@
     width: 1244px;
     margin-top: 35px;
 }
+.remindWords{
+    color: red;
+    margin-left: 25px;
+    font-size: 15px;
+}
 .head{
     height: 50px;
     line-height: 50px;
@@ -30,10 +35,13 @@
     margin-bottom: 20px;
 }
 .bannerTable>tr>td:nth-child(2){
+    min-width: 120px;
+}
+.bannerTable>tr>td:nth-child(3){
     min-width: 192px;
     flex: 1;
 }
-.bannerTable>tr>td:nth-child(3){
+.bannerTable>tr>td:nth-child(4){
     flex: 2;
 }
 .bannerTable>tr>td{
@@ -43,7 +51,7 @@
     min-width: 120px;
     min-height: 50px;
 }
-.bannerTable>tr>td:nth-child(2)>img{
+.bannerTable>tr>td:nth-child(3)>img{
     width: 192px;
     height: 108px;
 }
@@ -83,6 +91,7 @@
     opacity: 0;
 }
 .imageItem{
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;

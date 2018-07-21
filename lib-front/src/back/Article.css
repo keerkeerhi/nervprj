@@ -71,7 +71,7 @@
 .formItem2>label{
     width: 100px;
 }
-.formItem2>div{
+.formItem2>textarea{
     flex: 1;
 }
 .tthead{

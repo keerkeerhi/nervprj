@@ -23,13 +23,13 @@ class Game extends Nerv.Component {
                         <VLink to={`${match.url}/banner`} label="轮播图设置" />
                     </li>
                     <li>
+                        <VLink to={`${match.url}/notice`} label="公告设置" />
+                    </li>
+                    <li>
                         <VLink to={`${match.url}/nav`} label="导航管理" />
                     </li>
                     <li>
                         <VLink to={`${match.url}/article`} label="文章管理" />
-                    </li>
-                    <li>
-                        <VLink to={`${match.url}/notice`} label="公告设置" />
                     </li>
                 </ul>
                 <Route path={`${match.url}/banner`} component={Banner} />

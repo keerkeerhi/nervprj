@@ -54,6 +54,13 @@ class Game extends Nerv.Component {
             data: Object.assign({}, this.state.data, { [key]: value })
         });
     }
+    areaChange(key,e)
+    {
+        let {value} = e.target
+        this.setState({
+            data: Object.assign({}, this.state.data, { [key]: value })
+        });
+    }
     svAr(){
         let data = this.state.data
         data.createtime = Date.now()
@@ -152,10 +159,9 @@ class Game extends Nerv.Component {
                                 </div>
                                 <div className={ss.formItem2} >
                                     <label>文章内容</label>
-                                    <Input value={this.state.data.content}
-                                           type="textarea"
-                                           autosize={{ minRows: 4}}
-                                           onChange={this.onChange.bind(this, 'content')}></Input>
+                                    <textarea value={this.state.data.content}
+                                              rows="8" cols="20"
+                                           onChange={this.areaChange.bind(this, 'content')}></textarea>
                                 </div>
                                 <div className={ss.formItem} >
                                     <label>顺序</label>

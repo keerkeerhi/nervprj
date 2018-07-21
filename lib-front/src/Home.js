@@ -5,6 +5,7 @@ import backService from "./service/backService"
 import VLink from "./common/IVLink"
 import Inx from "./Inx"
 import Art from "./article/Art"
+import NoticeDetail from "./NoticeDetail"
 
 class Home extends Nerv.Component {
     constructor() {
@@ -56,10 +57,8 @@ class Home extends Nerv.Component {
                 <div style={{minHeight:windowH+'px'}} >
                     <Route path={`${match.url}/home`} component={Inx} />
                     <Route path={`${match.url}/art/:id`} component={Art} />
+                    <Route path={`${match.url}/noticeDetail/:id`} component={NoticeDetail} />
                 </div>
-                <section className={ss.newscont} >
-                    
-                </section>
                 <footer className={ss.footer} >
                     <header>
                         <div className={ss.link} >

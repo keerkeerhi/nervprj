@@ -150,4 +150,60 @@ export default {
                 });
         })
     },
+    //  notice
+    saveNotice(params){
+        return new Promise((resolve,reject)=>{
+            axios.post(baseURL + 'notice',params)
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        })
+    },
+    getNotices(){
+        return new Promise((resolve,reject)=>{
+            axios.get(baseURL + 'notice')
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        })
+    },
+    getNoticeDetail(id){
+        return new Promise((resolve,reject)=>{
+            axios.get(baseURL + 'notice/'+id)
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        })
+    },
+    hideNotice(params){
+        return new Promise((resolve,reject)=>{
+            axios.post(baseURL + 'hidenotice',params)
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        })
+    },
+    delNotice(id){
+        return new Promise((resolve,reject)=>{
+            axios.post(baseURL + 'del_notice',{id})
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        })
+    }
 }
