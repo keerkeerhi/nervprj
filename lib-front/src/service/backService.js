@@ -173,6 +173,17 @@ export default {
                 });
         })
     },
+    indexPage(){
+        return new Promise((resolve,reject)=>{
+            axios.get(baseURL + 'indexPage')
+                .then((response) => {
+                    resolve(response.data);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        })
+    },
     getNoticeDetail(id){
         return new Promise((resolve,reject)=>{
             axios.get(baseURL + 'notice/'+id)

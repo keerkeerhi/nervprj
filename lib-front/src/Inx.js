@@ -19,7 +19,7 @@ class Inx extends Nerv.Component {
         this.getNotice()
     }
     getNotice(){
-        backService.getNotices().then(res=>{
+        backService.indexPage().then(res=>{
             if (res.code==0)
             {
                 let notices1 = []
