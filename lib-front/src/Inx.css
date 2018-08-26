@@ -5,7 +5,7 @@
 
 .newscont{
     margin: 0 auto;
-    width: 1244px;
+    max-width: 1244px;
     /*background: #002D4A;*/
     height: 739px;
     padding-top: 50px;

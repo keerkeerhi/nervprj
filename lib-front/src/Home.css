@@ -15,7 +15,7 @@
     justify-content: center;
 }
 .link{
-    width: 1244px;
+    max-width: 1244px;
     color: #fff;
 }
 .link>a{
@@ -41,7 +41,7 @@ footer>div{
 }
 footer>div>div{
     font-size: 14px;
-    width: 1244px;
+    max-width: 1244px;
     margin-bottom: 12px;
     text-align: center;
 }

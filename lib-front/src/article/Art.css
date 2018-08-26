@@ -10,7 +10,7 @@
     justify-content: center;
 }
 .cct{
-    width: 1244px;
+    max-width: 1244px;
     margin-top: 35px;
     display: flex;
     flex-direction: row;
