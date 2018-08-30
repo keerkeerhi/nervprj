@@ -80,9 +80,10 @@ class Game extends Nerv.Component {
         this.setState({ showAdd: false, data:{sort:0}})
     }
     getList(id){
+        this.setState({cNavId:id})
         backService.getArt(id).then(res=>{
             if (res.code==0){
-                this.setState({list:res.info,cNavId:id})
+                this.setState({list:res.info})
             }
         })
     }
@@ -98,6 +99,7 @@ class Game extends Nerv.Component {
             }
         })
     }
+
     render() {
         return (
             <section className={ss.page} >
@@ -119,7 +121,17 @@ class Game extends Nerv.Component {
                     </div>
                     <section>
                         <header className={ss.aHead}>
-                            <Button onClick={this.newArt.bind(this)}>新建文章</Button>
+                            <Button onClick={()=>{
+                                if (!this.state.cNavId)
+                                {
+                                    Message({
+                                        message: '请在左侧选择要添加文章到哪个导航下',
+                                        type: 'warning'
+                                    });
+                                    return
+                                }
+                                this.props.history.push('/back/addArticle/'+this.state.cNavId)
+                            }}>新建文章</Button>
                         </header>
                         <table className={ss.aTable} >
                             <tr>
@@ -132,9 +144,10 @@ class Game extends Nerv.Component {
                                 this.state.list.map(it=>(
                                     <tr>
                                         <td>{it.title}</td>
-                                        <td>{it.content}</td>
+                                        <td>{it.content.substr(0,18)}</td>
                                         <td>{it.createtime}</td>
                                         <td>
+                                            <Button onClick={()=>this.props.history.push('/back/editArticle/'+it.id)} >编辑</Button>
                                             <Button onClick={this.delArt.bind(this,it.id)} >删除</Button>
                                         </td>
                                     </tr>

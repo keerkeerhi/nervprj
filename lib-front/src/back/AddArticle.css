@@ -1,0 +1,47 @@
+.page{
+    width: 1244px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page>h1{
+    font-size: 30px;
+    font-weight:bold;
+    line-height: 65px;
+}
+.formContent{
+
+}
+.saveBtn{
+    background: #007aff;
+    color: #fff;
+}
+.saveBtn:hover{
+    background: #4EA1FF;
+    color: #FFF;
+}
+.formContent>
+.formItem2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+.formItem{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+.formItem>label{
+    width: 100px;
+}
+.formItem>div{
+    width: 200px;
+}
+
+.formItem2>label{
+    width: 100px;
+}
+.formItem2>textarea{
+    flex: 1;
+}

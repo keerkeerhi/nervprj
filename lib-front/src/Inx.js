@@ -12,8 +12,7 @@ class Inx extends Nerv.Component {
             message: 'w bu hao',
             banners: [],
             navs:[],
-            notices1:[],
-            notices2:[]
+            notices:[]
         }
         this.getBs()
         this.getNotice()
@@ -22,23 +21,8 @@ class Inx extends Nerv.Component {
         backService.indexPage().then(res=>{
             if (res.code==0)
             {
-                let notices1 = []
-                let notices2 = []
-                let i = 0;
-                let list = res.info
-                while(list.length>0)
-                {
-                    if (i<3){
-                        notices1.push(list.pop())
-                    }
-                    else
-                    {
-                        notices2.push(list.pop())
-                    }
-                    i++
-                }
-                console.log('22==<',notices2)
-                this.setState({notices1,notices2})
+                let notices = res.info
+                this.setState({notices})
             }
         })
     }
@@ -86,7 +70,7 @@ class Inx extends Nerv.Component {
                             <div style={{position:"relative"}} className='noticesw-container'>
                                 <div className='swiper-wrapper'>
                                     {
-                                        this.state.notices1.map(it=>(
+                                        this.state.notices.map(it=>(
                                             <Link to={`/index/noticeDetail/${it.id}`} style={{background: "url('"+ it.img +"') no-repeat",
                                                 height:'300px',
                                                 backgroundSize: "auto 100%",
@@ -107,8 +91,8 @@ class Inx extends Nerv.Component {
                         </section>
                         <ul className={ss.nsUl} >
                             {
-                                this.state.notices2.length>0?(
-                                    this.state.notices2.map(it=>(
+                                this.state.notices.length>0?(
+                                    this.state.notices.map(it=>(
                                         <Link to={`/index/noticeDetail/${it.id}`}>
                                             <label>{it.title}</label>
                                             <label>{it.createtime}</label>

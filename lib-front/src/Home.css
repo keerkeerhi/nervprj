@@ -1,6 +1,7 @@
 
 .container{
-
+    background-image: url("/assets/img/book.png") repeat;
+    background: linear-gradient(45deg,#F5F6F7,rgba(78,183,255,.3));
 }
 .footer{
     box-shadow: 0px -2px 5px rgba(0,0,0,.3);

@@ -26,9 +26,8 @@ class ADetail extends Nerv.Component {
                 <header className={ss.header} >{this.state.data.title}</header>
                 <div className={ss.time}>{this.state.data.createtime}</div>
                 <section className={ss.content} >
-                    <pre>
-                        {this.state.data.content}
-                    </pre>
+                    <div dangerouslySetInnerHTML={{__html:this.state.data.content}} >
+                    </div>
                 </section>
             </section>
         )

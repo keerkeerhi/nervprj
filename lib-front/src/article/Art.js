@@ -62,8 +62,10 @@ class Art extends Nerv.Component {
                                 ))
                             }
                         </ul>
-                        <Route path={`${match.url}/list/:id`} component={ADList} />
-                        <Route path={`${match.url}/detail/:nid`} component={ADetail} />
+                        <div className={ss.rightContent} >
+                            <Route path={`${match.url}/list/:id`} component={ADList} />
+                            <Route path={`${match.url}/detail/:nid`} component={ADetail} />
+                        </div>
                     </section>
                 </section>
             </section>

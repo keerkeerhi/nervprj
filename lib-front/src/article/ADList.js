@@ -44,8 +44,10 @@ class ADetail extends Nerv.Component {
 
     render() {
         return (
-            <div>
-                <header className={ss.arhead}>文章列表</header>
+            <div className={ss.page} >
+                <header className={ss.arhead}>
+                    <label>文章列表</label>
+                </header>
                 {
                     this.state.list.length==0?(
                         <div>暂无文章数据</div>

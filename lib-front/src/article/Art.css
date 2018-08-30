@@ -1,6 +1,6 @@
 .header{
-    height: 280px;
-    background: url("../assets/img/timg.jpg") no-repeat;
+    height: 80px;
+    /*background: url("../assets/img/timg.jpg") no-repeat;*/
     background-position: center;
     background-size: 1920px 415px;
 }
@@ -10,10 +10,12 @@
     justify-content: center;
 }
 .cct{
+    background: #fff;
     max-width: 1244px;
     margin-top: 35px;
-    display: flex;
-    flex-direction: row;
+    min-height: 500px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
 }
 .cct>section{
     flex: 1;
@@ -22,14 +24,20 @@
     flex: 1;
     margin-right: 40px;
 }
-
+.rightContent{
+    float: left;
+    width: 964px;
+    margin-top: 40px;
+}
 .nav{
-    background: rgba(0,0,0,.3);
+    margin: 40px;
+    float: left;
+    background: rgba(244,244,244,.8);
     display: flex;
     flex-direction: column;
     color: #000000;
-    min-width: 200px;
-    margin-right: 40px;
+    width: 200px;
+    /*margin-right: 40px;*/
     box-shadow: 0 0 15px 0 #ccc;
 }
 .nav>li{

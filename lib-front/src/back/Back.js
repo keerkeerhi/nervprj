@@ -4,6 +4,8 @@ import VLink from "../common/VLink"
 import Banner from './Banner'
 import Nav from './Nav'
 import Article from './Article'
+import AddArticle from './AddArticle'
+import EditArticle from './EditArticle'
 import Notice from './Notice'
 import ss from './Back.css'
 
@@ -35,6 +37,8 @@ class Game extends Nerv.Component {
                 <Route path={`${match.url}/banner`} component={Banner} />
                 <Route path={`${match.url}/nav`} component={Nav} />
                 <Route path={`${match.url}/article`} component={Article} />
+                <Route path={`${match.url}/addArticle/:id`} component={AddArticle} />
+                <Route path={`${match.url}/editArticle/:id`} component={EditArticle} />
                 <Route path={`${match.url}/notice`} component={Notice} />
             </div>
         )

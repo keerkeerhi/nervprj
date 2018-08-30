@@ -7,7 +7,7 @@
     margin: 0 auto;
     max-width: 1244px;
     /*background: #002D4A;*/
-    height: 739px;
+    height: 642px;
     padding-top: 50px;
 }
 .newsHeader{
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 345px;
 }
 .newsTit{
     position: absolute;

@@ -26,6 +26,10 @@ class Notice extends Nerv.Component {
                 Message.error("获取数据超时！");
         })
     }
+    editbanner(it){
+        console.log('---->',it)
+        this.setState({data:Object.assign({url:it.img},it),showAdd:true})
+    }
     addBanner(){
         let banner = this.state.data
         let file = this.state.image
@@ -137,7 +141,10 @@ class Notice extends Nerv.Component {
                                     <td><img src={it.img} /></td>
                                     <td>{it.content}</td>
                                     <td><Button onClick={this.hidebanner.bind(this,it)}>{it.isshow==1?"隐藏":"显示"}</Button></td>
-                                    <td><Button onClick={this.delbanner.bind(this,it.id)} >删除</Button></td>
+                                    <td>
+                                        <Button onClick={this.editbanner.bind(this,it)}>编辑</Button>
+                                        <Button onClick={this.delbanner.bind(this,it.id)} >删除</Button>
+                                    </td>
                                 </tr>
                             ))
                         }
@@ -146,7 +153,7 @@ class Notice extends Nerv.Component {
 
                 {/*弹框*/}
                 <Dialog
-                    title="添加公告"
+                    title={this.state.data.id?'编辑公告':'添加公告'}
                     visible={ this.state.showAdd }
                     onCancel={ () => this.setState({ showAdd: false }) }
                 >
