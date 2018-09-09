@@ -1,6 +1,9 @@
 .banner{
     background: #0089E1;
     box-shadow: 0px 2px 5px rgba(0,0,0,.3);
+    max-width: 1244px;
+    max-height: 688.72px;
+    margin: 55px auto 0;
 }
 
 .newscont{
