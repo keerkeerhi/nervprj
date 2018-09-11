@@ -40,8 +40,8 @@ class Inx extends Nerv.Component {
         let windowH = this.getClientHeight();
         return (
             <section>
-                <section style={{height:windowH+'px'}} className={ss.banner}>
-                    <div className='swiper-container'>
+                <section className={ss.banner}>
+                    <div style={{height:'688.72px'}} className='swiper-container'>
                         <div className='swiper-wrapper'>
                             {
                                 this.state.banners.map(it=>(
